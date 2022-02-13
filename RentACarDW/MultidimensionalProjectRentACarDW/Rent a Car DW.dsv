@@ -1,0 +1,196 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="fac15b07-0ff9-473e-ad32-a5a1b93cfda5" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Rent a Car DW</ID>
+  <Name>Rent a Car DW</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Rent a Car DW</DataSourceID>
+  <Schema>
+    <xs:schema id="Rent_x0020_a_x0020_Car_x0020_DW" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Rent_x0020_a_x0020_Car_x0020_DW" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="e72a84c7-31d4-4469-b3d8-fd2ea418defd">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Dim_Automobil" msprop:design-time-name="c57e0d8c-f592-4014-843f-0162c2b0fa9d" msprop:DbTableName="Dim_Automobil" msprop:FriendlyName="Dim_Automobil" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_automobila" msprop:design-time-name="cc4246d9-1184-499a-a5a3-4da6e9f964e6" msprop:DbColumnName="id_automobila" msprop:FriendlyName="id_automobila" type="xs:int" />
+                  <xs:element name="kategorija" msprop:design-time-name="b7e2dc07-f629-4905-af74-c7d15c6709f1" msprop:DbColumnName="kategorija" msprop:FriendlyName="kategorija" type="xs:int" />
+                  <xs:element name="proizvodjac" msprop:design-time-name="33c43422-4d1c-47b2-a665-4aa299b484d9" msprop:DbColumnName="proizvodjac" msprop:FriendlyName="proizvodjac">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="model" msprop:design-time-name="8fff5bb2-5892-416f-b819-d1e028225b09" msprop:DbColumnName="model" msprop:FriendlyName="model">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="registracija" msprop:design-time-name="76f56194-a1f2-470a-9ecc-8b99b70de19f" msprop:DbColumnName="registracija" msprop:FriendlyName="registracija" type="xs:int" />
+                  <xs:element name="gorivo" msprop:design-time-name="8524703c-61ad-4fd3-8371-429e93ceab8c" msprop:DbColumnName="gorivo" msprop:FriendlyName="gorivo">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="vrsta_upravljanja" msprop:design-time-name="e90d8c59-fb16-4330-a3ee-64a21969ffa1" msprop:DbColumnName="vrsta_upravljanja" msprop:FriendlyName="vrsta_upravljanja" type="xs:int" />
+                  <xs:element name="datum_zadnjeg_servisa" msprop:design-time-name="02384799-b52e-4ed0-b4c4-c1f9434fb00e" msprop:DbColumnName="datum_zadnjeg_servisa" msprop:FriendlyName="datum_zadnjeg_servisa" type="xs:dateTime" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Dobavljac" msprop:design-time-name="e342783c-7d46-4f51-9e89-7915c2d64c8c" msprop:DbTableName="Dim_Dobavljac" msprop:FriendlyName="Dim_Dobavljac" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_dobavljaca" msprop:design-time-name="58f8ae1f-d554-486b-91fd-2f2316a78279" msprop:DbColumnName="id_dobavljaca" msprop:FriendlyName="id_dobavljaca" type="xs:int" />
+                  <xs:element name="naziv" msprop:design-time-name="643fb231-bd38-42d7-99f5-92f53947e5b1" msprop:DbColumnName="naziv" msprop:FriendlyName="naziv">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="lokacija" msprop:design-time-name="5aafab67-89cc-418a-9f5b-13661d04d8c3" msprop:DbColumnName="lokacija" msprop:FriendlyName="lokacija">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Vrijeme" msprop:design-time-name="7e2c55ef-fb58-4099-ae71-02820c2440a7" msprop:DbTableName="Dim_Vrijeme" msprop:FriendlyName="Dim_Vrijeme" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_vrijeme" msprop:design-time-name="13dcd62b-11d5-4d83-b96e-38b7363bc241" msprop:DbColumnName="id_vrijeme" msprop:FriendlyName="id_vrijeme" type="xs:int" />
+                  <xs:element name="datum" msprop:design-time-name="fdfa6274-7e1c-4eed-850d-99830ccdfa26" msprop:DbColumnName="datum" msprop:FriendlyName="datum" type="xs:dateTime" />
+                  <xs:element name="godina" msprop:design-time-name="55731d5f-228e-48b6-8a48-091902c43f06" msprop:DbColumnName="godina" msprop:FriendlyName="godina" type="xs:int" />
+                  <xs:element name="mjesec" msprop:design-time-name="ca97eef8-6dd1-4626-ae96-8c3b37bf449a" msprop:DbColumnName="mjesec" msprop:FriendlyName="mjesec" type="xs:int" />
+                  <xs:element name="dan" msprop:design-time-name="aca4ccbe-ccc0-4047-bda2-b7c48e76073a" msprop:DbColumnName="dan" msprop:FriendlyName="dan" type="xs:int" />
+                  <xs:element name="sat" msdata:DataType="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="3dd137cf-a58f-4658-a199-5fd0ce76a875" msprop:DbColumnName="sat" msprop:FriendlyName="sat" type="xs:anyType" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Poslovnica" msprop:design-time-name="9f47a240-0e96-4398-bf82-1cb0432f1c21" msprop:DbTableName="Dim_Poslovnica" msprop:FriendlyName="Dim_Poslovnica" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_poslovnice" msprop:design-time-name="fe14c91c-2d26-49ae-bfcc-eae6a4b54fc3" msprop:DbColumnName="id_poslovnice" msprop:FriendlyName="id_poslovnice" type="xs:int" />
+                  <xs:element name="naziv_poslovnice" msprop:design-time-name="d90294a2-3bca-4489-97a0-6d0425b26391" msprop:DbColumnName="naziv_poslovnice" msprop:FriendlyName="naziv_poslovnice">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="postanski_broj" msprop:design-time-name="8e824906-b925-4bbd-83ad-ca75c4b559f3" msprop:DbColumnName="postanski_broj" msprop:FriendlyName="postanski_broj" type="xs:int" />
+                  <xs:element name="grad" msprop:design-time-name="4ec09513-df35-4f54-b122-3bb416652568" msprop:DbColumnName="grad" msprop:FriendlyName="grad">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="drzava" msprop:design-time-name="f8a60c6f-b13d-4c8a-aa4b-0ed046b1b65b" msprop:DbColumnName="drzava" msprop:FriendlyName="drzava">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="broj_telefona" msprop:design-time-name="26c04e14-283e-454c-b198-234860cffb09" msprop:DbColumnName="broj_telefona" msprop:FriendlyName="broj_telefona" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Fact_Nabavka_Automobila" msprop:design-time-name="2c98d384-9bf4-4532-bab6-b7bd04700c28" msprop:DbTableName="Fact_Nabavka_Automobila" msprop:FriendlyName="Fact_Nabavka_Automobila" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msprop:design-time-name="6749d8f9-dc41-4b20-9bca-25c0522082b8" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:int" />
+                  <xs:element name="id_poslovnice" msprop:design-time-name="3784e59f-f4e3-4d55-9eb8-cb166c2385a6" msprop:DbColumnName="id_poslovnice" msprop:FriendlyName="id_poslovnice" type="xs:int" />
+                  <xs:element name="id_automobila" msprop:design-time-name="df63d1fb-d675-4eca-a02d-de15fabd6594" msprop:DbColumnName="id_automobila" msprop:FriendlyName="id_automobila" type="xs:int" />
+                  <xs:element name="id_vrijeme" msprop:design-time-name="6ecda82d-7d8c-44d1-bf88-52a26b69032b" msprop:DbColumnName="id_vrijeme" msprop:FriendlyName="id_vrijeme" type="xs:int" />
+                  <xs:element name="id_dobavljaca" msprop:design-time-name="43e7bb1a-29f8-4dbc-9997-5d864cb9dffc" msprop:DbColumnName="id_dobavljaca" msprop:FriendlyName="id_dobavljaca" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Automobil" />
+          <xs:field xpath="id_automobila" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Dobavljac_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Dobavljac" />
+          <xs:field xpath="id_dobavljaca" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Vrijeme_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Vrijeme" />
+          <xs:field xpath="id_vrijeme" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Poslovnica_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Poslovnica" />
+          <xs:field xpath="id_poslovnice" />
+        </xs:unique>
+        <xs:unique name="dbo_Fact_Nabavka_Automobila_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Fact_Nabavka_Automobila" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:keyref name="FK_Fact_Nabavka_Automobila_Dim_Dobavljac" refer="dbo_Dim_Dobavljac_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Nabavka_Automobila" />
+          <xs:field xpath="id_dobavljaca" />
+        </xs:keyref>
+        <xs:keyref name="FK_Fact_Nabavka_Automobila_Dim_Automobil" refer="Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Nabavka_Automobila" />
+          <xs:field xpath="id_automobila" />
+        </xs:keyref>
+        <xs:keyref name="FK_Fact_Nabavka_Automobila_Dim_Vrijeme" refer="dbo_Dim_Vrijeme_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Nabavka_Automobila" />
+          <xs:field xpath="id_vrijeme" />
+        </xs:keyref>
+        <xs:keyref name="FK_Fact_Nabavka_Automobila_Dim_Poslovnica" refer="dbo_Dim_Poslovnica_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Nabavka_Automobila" />
+          <xs:field xpath="id_poslovnice" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Rent_x0020_a_x0020_Car_x0020_DW xmlns="" />
+  </Schema>
+</DataSourceView>

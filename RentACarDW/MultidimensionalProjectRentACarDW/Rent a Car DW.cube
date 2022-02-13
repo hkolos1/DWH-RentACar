@@ -1,0 +1,191 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="20f49b11-7694-473f-8629-8f411e8725c0" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Rent a Car DW</ID>
+  <Name>Rent a Car DW</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="795607b7-ae86-4dee-962e-553e18145f6d">
+      <ID>Dim Poslovnica 1</ID>
+      <Name>Dim Poslovnica 1</Name>
+      <DimensionID>Dim Poslovnica 1</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="4e6e2307-34af-4db2-9123-3ce16c21e58d">
+          <AttributeID>Id Poslovnice</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="8ee88a61-12ed-4741-a84d-a6a46633e48b">
+      <ID>Dim Vrijeme 1</ID>
+      <Name>Dim Vrijeme 1</Name>
+      <DimensionID>Dim Vrijeme 1</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="33b59d4f-6b21-48ed-bf27-b5c40527a868">
+          <AttributeID>Id Vrijeme</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="76fe706a-4850-49d9-adf9-bc04926f01f2">
+      <ID>Dim Automobil 2</ID>
+      <Name>Dim Automobil 2</Name>
+      <DimensionID>Dim Automobil 2</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="51ac90fa-18a0-4ca7-9b76-318b67531984">
+          <AttributeID>Id Automobila</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="82d1d7c8-7497-4d15-9db5-401e934b0280">
+      <ID>Dim Dobavljac</ID>
+      <Name>Dim Dobavljac</Name>
+      <DimensionID>Dim Dobavljac</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="2780e2b6-3e22-4462-8b08-3889fe2c4d37">
+          <AttributeID>Id Dobavljaca</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="aa828117-a900-42ed-bc3a-3a80364f830e">
+      <ID>Fact Nabavka Automobila</ID>
+      <Name>Fact Nabavka Automobila</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="ce38c9e0-e2b5-455d-b082-cd4e6a8a0031">
+          <ID>Fact Nabavka Automobila Count</ID>
+          <Name>Fact Nabavka Automobila Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="fc20a05c-a641-46a7-93a4-d15620e0cc16">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="052ca1bc-1e46-4a32-8710-d6f0ed562e61">
+              <TableID>dbo_Fact_Nabavka_Automobila</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="a66b9714-4cfd-418c-8210-ffb91d846ba4">
+          <CubeDimensionID>Dim Poslovnica 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="14374762-e067-4996-a8fd-20dba7eca73b">
+              <AttributeID>Id Poslovnice</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="439f7a14-915c-4d5e-9efa-df1fa5ef4d50">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ea2ed267-30b3-4b01-b34e-96f4cced44aa">
+                    <TableID>dbo_Fact_Nabavka_Automobila</TableID>
+                    <ColumnID>id_poslovnice</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="24957be5-81b0-4659-8ee8-b9ac37210038">
+          <CubeDimensionID>Dim Vrijeme 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="297a8cac-420c-4126-a7f1-5ae15ec1be51">
+              <AttributeID>Id Vrijeme</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="5b514be2-f0ee-4690-ab82-f9c96c4155e8">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="628bc204-3bf0-4425-b185-70d355fb6d70">
+                    <TableID>dbo_Fact_Nabavka_Automobila</TableID>
+                    <ColumnID>id_vrijeme</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="4053172d-7f85-4cf9-b658-9d4dc9bcebf9">
+          <CubeDimensionID>Dim Automobil 2</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="f0855a71-70a7-4b16-b0a9-9fd40e944082">
+              <AttributeID>Id Automobila</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="918ba076-f106-474a-8c5c-e3d5d231804e">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a914778b-775c-49ef-a965-ed7403862068">
+                    <TableID>dbo_Fact_Nabavka_Automobila</TableID>
+                    <ColumnID>id_automobila</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="2ab6cf31-4386-4444-95d6-7792f01f9e29">
+          <CubeDimensionID>Dim Dobavljac</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="918ddb3d-8a20-4007-9b43-c1d5f84d6150">
+              <AttributeID>Id Dobavljaca</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="2bd29fde-7967-4a30-afb5-e7f0e49860be">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5c873bbd-5916-4daf-a591-9a06b5b4ccba">
+                    <TableID>dbo_Fact_Nabavka_Automobila</TableID>
+                    <ColumnID>id_dobavljaca</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="57fa526e-aec8-4d88-8329-fd24514e9f2e">
+    <DataSourceViewID>Rent a Car DW</DataSourceViewID>
+  </Source>
+</Cube>

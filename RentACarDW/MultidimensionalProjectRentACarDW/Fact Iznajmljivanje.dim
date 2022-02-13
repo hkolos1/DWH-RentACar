@@ -1,0 +1,181 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="16e411b1-401f-44ba-af28-28b96a574776" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Fact Iznajmljivanje</ID>
+  <Name>Fact Iznajmljivanje</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="b9819e63-d346-456a-a0d8-e572be506be7">
+    <DataSourceViewID>Rent a Car DW view</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="4fffa56e-b0dc-4350-9d8e-8374821621d2">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="e041b781-42a8-4309-9f42-a0e24ee1d101">
+      <ID>Id Iznajmljivanja</ID>
+      <Name>Id Iznajmljivanja</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6c9ac8d7-a192-408b-b1d6-60a1f96560d1">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f37495a5-3382-4149-a9be-ace8c05b2f44">
+            <TableID>dbo_Fact_Iznajmljivanje</TableID>
+            <ColumnID>id_iznajmljivanja</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="d30b92d0-c065-4bb7-8e79-a4be5ab45f8e">
+          <AttributeID>Id Poslovnice</AttributeID>
+          <Name>Id Poslovnice</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="cbd5aa3d-01fd-4eae-8895-8b357058b617">
+          <AttributeID>Id Ugovora</AttributeID>
+          <Name>Id Ugovora</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="5621df78-1517-4c49-8cbf-2e072bce8d90">
+          <AttributeID>Id Vozaca</AttributeID>
+          <Name>Id Vozaca</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="bec68ec0-a43a-4ee2-8570-e72e8f3bab9e">
+          <AttributeID>Id Automobila</AttributeID>
+          <Name>Id Automobila</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f3184bfa-f642-4b1c-a381-1ab4a2d5b979">
+          <AttributeID>Id Racuna</AttributeID>
+          <Name>Id Racuna</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="369fa629-c9aa-4287-90b3-0f95d3e1df57">
+      <ID>Id Poslovnice</ID>
+      <Name>Id Poslovnice</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0b1fa6fa-5611-4243-a830-bd64eede6432">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fc104e39-a4c5-428d-bf3c-16f033514b51">
+            <TableID>dbo_Fact_Iznajmljivanje</TableID>
+            <ColumnID>id_poslovnice</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ad26632f-d486-420d-8423-da75e3ecf663">
+      <ID>Id Ugovora</ID>
+      <Name>Id Ugovora</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="dba8fe83-f0f2-4e32-abae-63aa892f3414">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9d56649e-1311-4ffb-a2c8-7a268d25a0f5">
+            <TableID>dbo_Fact_Iznajmljivanje</TableID>
+            <ColumnID>id_ugovora</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1b886f3a-0fbc-49fe-8c24-e923f3597bdc">
+      <ID>Id Vozaca</ID>
+      <Name>Id Vozaca</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="72b33549-4049-49f5-98c6-f765c6d28b38">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f8e18072-9c18-4133-9829-ab835e3ce43e">
+            <TableID>dbo_Fact_Iznajmljivanje</TableID>
+            <ColumnID>id_vozaca</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="785f8e83-1af6-4b6c-9304-6812a5c290f8">
+      <ID>Id Automobila</ID>
+      <Name>Id Automobila</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a9cd224d-ea44-498a-936a-19aa024debfd">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="927751c3-b682-44b3-ad31-f9b08856fbd4">
+            <TableID>dbo_Fact_Iznajmljivanje</TableID>
+            <ColumnID>id_automobila</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="413bae5d-8550-4d9b-8147-ca7f17e26293">
+      <ID>Id Racuna</ID>
+      <Name>Id Racuna</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e9bef393-54ad-4b62-9923-b9deabcb7b1a">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="00b33fe0-18cf-4edc-b901-f4943d53bed2">
+            <TableID>dbo_Fact_Iznajmljivanje</TableID>
+            <ColumnID>id_racuna</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

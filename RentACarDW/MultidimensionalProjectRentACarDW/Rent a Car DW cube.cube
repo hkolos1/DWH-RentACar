@@ -1,0 +1,262 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="cc112923-77dc-4aff-8d34-4b020eeeedf2" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Rent a Car DW cube</ID>
+  <Name>Rent a Car DW cube</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="9d3b05a8-c1d1-40a7-80b0-2c924808d459">
+      <ID>Fact Iznajmljivanje</ID>
+      <Name>Fact Iznajmljivanje</Name>
+      <DimensionID>Fact Iznajmljivanje</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="569aed73-591a-46be-9293-b960c8b15b64">
+          <AttributeID>Id Iznajmljivanja</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7ac95b9f-3df4-499b-8c72-5d3507e56d3f">
+          <AttributeID>Id Poslovnice</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="86b2ab14-0f65-4009-bde3-b663d0b187ae">
+          <AttributeID>Id Ugovora</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="29880bd5-03fe-46a2-9b81-8e4ed4b2ccb9">
+          <AttributeID>Id Vozaca</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b0997e46-6037-448c-9e79-577f967ad039">
+          <AttributeID>Id Automobila</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="00f7e185-2d3d-4758-8f72-7edcb50d9708">
+          <AttributeID>Id Racuna</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="81c2e7c6-8845-4327-8db1-87ee0e53e5b6">
+      <ID>Dim Poslovnica</ID>
+      <Name>Dim Poslovnica</Name>
+      <DimensionID>Dim Poslovnica</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="bffc5253-bf07-4c15-8903-5bbc19bd7e94">
+          <AttributeID>Id Poslovnice</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="2e23a49f-957c-425a-9fc8-c012749af78e">
+      <ID>Dim Ugovor</ID>
+      <Name>Dim Ugovor</Name>
+      <DimensionID>Dim Ugovor</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="b95dc39a-29d1-469c-9680-24909a832b88">
+          <AttributeID>Id Ugovora</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="1a864ed1-3c56-4d87-96d0-dde277a13eea">
+      <ID>Dim Vozac</ID>
+      <Name>Dim Vozac</Name>
+      <DimensionID>Dim Vozac</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="a1179d8b-0f01-40a0-90b0-63a2c9dfcd1d">
+          <AttributeID>Id Vozaca</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="91cb1a1d-6ec1-454c-bbb7-b9516b1eca22">
+      <ID>Dim Automobil</ID>
+      <Name>Dim Automobil</Name>
+      <DimensionID>Dim Automobil</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="5523f479-b105-4011-83e0-5bbe9e2b0b85">
+          <AttributeID>Id Automobila</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="b78d1980-6ac3-4b3e-9dd9-5f80bcd650fb">
+      <ID>Dim Racun</ID>
+      <Name>Dim Racun</Name>
+      <DimensionID>Dim Racun</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="f9f77b3d-10b2-4cd8-868c-ee30550d1325">
+          <AttributeID>Id Racuna</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="40fa266b-aac9-4e8b-b56c-ccbad192cee3">
+      <ID>Fact Iznajmljivanje</ID>
+      <Name>Fact Iznajmljivanje</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="52a0b94c-3fb9-4a25-849c-047ce45b1a88">
+          <ID>Fact Iznajmljivanje Count</ID>
+          <Name>Fact Iznajmljivanje Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="6138d798-e8e7-45c5-b57e-86783dcbbc7f">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="709ff3b1-1363-41d7-aa78-049a485f4a15">
+              <TableID>dbo_Fact_Iznajmljivanje</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="f3f212e5-d84f-4691-91b4-ffd46d92c50c">
+          <CubeDimensionID>Fact Iznajmljivanje</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="a0ff3eb9-4c98-405a-b184-e0da5af6e597">
+              <AttributeID>Id Iznajmljivanja</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="5496bd9a-f959-4014-82cc-33ef38657141">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="8f42e19b-6fbf-401f-9ad0-3780072745ea">
+                    <TableID>dbo_Fact_Iznajmljivanje</TableID>
+                    <ColumnID>id_iznajmljivanja</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="f51d5955-305f-4dd0-a84a-8ff30949b648">
+          <CubeDimensionID>Dim Poslovnica</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="12ec9c8e-c63b-448a-9c36-728779076d95">
+              <AttributeID>Id Poslovnice</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="89ed8fc0-2167-484d-8665-438fd3e17c0f">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="8769df13-9f98-4322-8ada-69e95a59a68c">
+                    <TableID>dbo_Fact_Iznajmljivanje</TableID>
+                    <ColumnID>id_poslovnice</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ffb32000-59a0-4de2-a259-e2973dd72164">
+          <CubeDimensionID>Dim Ugovor</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="2725ee2c-8c25-471c-bb65-7e798e980584">
+              <AttributeID>Id Ugovora</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="32405ddb-356e-442f-a14a-00cb8ff6d5d0">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="21909ff2-2ef6-4c24-9662-0f68df02187d">
+                    <TableID>dbo_Fact_Iznajmljivanje</TableID>
+                    <ColumnID>id_ugovora</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="25aaa72e-6cde-4f0b-9ab4-0121d3ea2733">
+          <CubeDimensionID>Dim Vozac</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="7fc04424-3a23-4974-9546-6f75086da0f9">
+              <AttributeID>Id Vozaca</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="8da4a6d7-6b5e-45e3-82d0-a1368ec52653">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="becad937-375f-46ca-8ca1-3602e05c2cce">
+                    <TableID>dbo_Fact_Iznajmljivanje</TableID>
+                    <ColumnID>id_vozaca</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="6a4786bc-c77b-4258-9b7d-79e6492c4712">
+          <CubeDimensionID>Dim Automobil</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b54627a2-9434-42ee-8060-75123784bab0">
+              <AttributeID>Id Automobila</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="5bfff9b5-ead0-403e-a0aa-84fd5322acb1">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="560c7d76-7866-4809-a590-086ef2bedf68">
+                    <TableID>dbo_Fact_Iznajmljivanje</TableID>
+                    <ColumnID>id_automobila</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="5a1a1b4a-5fce-4c9a-a9fc-154ee6138f49">
+          <CubeDimensionID>Dim Racun</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="99f2e2de-66e6-41a6-b958-6270ee783109">
+              <AttributeID>Id Racuna</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="c6a8e30b-c942-4a2f-af56-db373545707e">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="8dac926d-94ae-40ac-b3a2-af7d2303a068">
+                    <TableID>dbo_Fact_Iznajmljivanje</TableID>
+                    <ColumnID>id_racuna</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="758c3e79-dbf8-4fb0-9554-d9c89d9b832b">
+    <DataSourceViewID>Rent a Car DW view</DataSourceViewID>
+  </Source>
+</Cube>
