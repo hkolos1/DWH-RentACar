@@ -1,0 +1,12 @@
+Fact_Iznajmljivanje1
+	- Ovaj upit daje ime proizvodjaca, kao i model koji je iznajmljen najvise puta u toku tacno odredjene godine
+
+Fact_Iznajmljivanje2
+	- Prvi upit vraca informacije o najjeftinijim automobilima za iznajmljivanje
+	- Drugi upit vraca informacije o najskupljim automobilima za iznajmljivanje
+
+Fact_Nabavka_Automobila
+	- Upit daje informacije o dobavljacu koji je dostavio auto nekog proizvodjaca za tacno odredjeni datum
+
+Fact_Odrzavanje
+	- Ovaj upit vraca proizvodjaca za cije automobile je potrebno najvise novca za odrzavanje, kao i taj iznos.
