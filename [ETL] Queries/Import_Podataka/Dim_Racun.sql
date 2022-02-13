@@ -1,0 +1,1 @@
+SELECT * FROM [rent a car].dbo.Racun;
