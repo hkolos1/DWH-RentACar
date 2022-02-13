@@ -1,0 +1,22 @@
+USE [rent a car]
+GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Dim_Vrijeme](
+	[id_vrijeme] [int] NOT NULL,
+	[datum] [date] NOT NULL,
+	[godina] [int] NOT NULL,
+	[mjesec] [int] NOT NULL,
+	[dan] [int] NOT NULL,
+	[sat] [time](7) NOT NULL,
+ CONSTRAINT [PK_Dim_Vrijeme] PRIMARY KEY CLUSTERED 
+(
+	[id_vrijeme] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
